@@ -468,7 +468,7 @@ private fun ContentQR(
                 .fillMaxWidth()
                 .height(80.dp)
                 .padding(5.dp),
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = CenterVertically
         ) {
             Image(
                 painter = painterResource(R.drawable.icon_pedidos),

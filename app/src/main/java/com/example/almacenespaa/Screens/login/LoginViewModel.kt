@@ -29,9 +29,9 @@ class LoginViewModel (
                 val responseService = authService.LoginApi(user,pwd)
                 dataStorePreferenceRepository.clearSharedPreference()
                 if (responseService.isSuccessful) {
-                    isSuccessLoading.value = true
                     responseService.body().let {
                         if(it!!.usuID!!>0){
+                            isSuccessLoading.value = true
                             Log.d("Logging", "LOGIN SUCCESS"+responseService.body().toString())
                             dataStorePreferenceRepository.saveinicio(checkInicio.value)
                             dataStorePreferenceRepository.saveUserInfo(user,pwd,responseService.body()!!)

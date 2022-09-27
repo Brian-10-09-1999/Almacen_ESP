@@ -337,7 +337,7 @@ fun PedidoCard(
         )
         Column {
             Text(
-                text = item.ref!!,
+                text = item.ref.toString(),
                 style = MaterialTheme.typography.subtitle2,
                 modifier = Modifier.padding(vertical = 2.dp)
             )
@@ -347,12 +347,12 @@ fun PedidoCard(
                 modifier = Modifier.padding(vertical = 2.dp)
             )
             Text(
-                text = "Ubicacion: " + item.ubicacion!!,
+                text = "Ubicacion: " + item.ubicacion,
                 style = MaterialTheme.typography.subtitle2,
                 modifier = Modifier.padding(vertical = 2.dp)
             )
             Text(
-                text = "Piezas surtidas: "+item.surtido!!,
+                text = "Piezas surtidas: "+item.surtido,
                 style = MaterialTheme.typography.subtitle2,
                 modifier = Modifier.padding(vertical = 2.dp)
             )

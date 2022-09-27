@@ -304,6 +304,24 @@ class PedidosMaterialViewModel (
             clearGranel()
         }
     }
+     fun getComponenttFamily(item: Piezas){
+         viewModelScope.launch (Dispatchers.IO){
+             try {
+                 alertdialog(1,"¡Esperando respuesta del servidor!")
+                 val authApiService = RetrofitHelper.getAuthService()
+                 val responseService = authApiService.getComponentFamily(item.idFami!!)
+                 if (responseService.code() == 200){
+                     Log.d("Componetes", responseService.body().toString())
+
+                 }
+             }catch (e: Exception){
+                 alertdialog(3,"")
+                 Log.d("Logging", "Error Authentication", e)
+                 delay(4000)
+             }
+             alertdialog(0,"")
+         }
+     }
     fun pzSimilar(datos:String,similar:String,context: Context){
         val dataStorePreferenceRepository = SharedPrefence(context)
         val subcentro = dataStorePreferenceRepository.getSubCentro()!!.toInt()

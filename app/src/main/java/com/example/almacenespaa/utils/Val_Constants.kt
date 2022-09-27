@@ -22,6 +22,9 @@ object Val_Constants {
     /**Moviemiento**/
     const val API_MOVIMIENTO = "Android/ubicaciones/ingresaComUbicacion.php"
 
+    // Obtener datos de los elementos de una familia de un componente
+    const val API_GETFAMILY = "Android/Almacen/listaCodigoRefSimilar.php"
+
 
     const val ExpandAnimation = 300
     const val CollapseAnimation = 300

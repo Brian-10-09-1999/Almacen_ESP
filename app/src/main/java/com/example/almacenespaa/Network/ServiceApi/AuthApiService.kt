@@ -1,5 +1,6 @@
 package com.example.almacenespaa.Network.ServiceApi
 
+import com.example.almacenespaa.Network.Models.ComponentFamily.ResponseComponentFamily
 import com.example.almacenespaa.Network.Models.Login
 import com.example.almacenespaa.Network.Models.Moviemientos.MoviemientoPost
 import com.example.almacenespaa.Network.Models.Moviemientos.QRMoviValida
@@ -64,4 +65,9 @@ interface AuthApiService {
         @Query("usuarioIDx") usuarioIDx : String,
         @Query("usuarioIDx") granelx : String,
     ): Response<MoviemientoPost>
+
+
+    @GET(Val_Constants.API_GETFAMILY)
+    suspend fun getComponentFamily (
+        @Query("idFami") idFami : String) :Response<ResponseComponentFamily>
 }

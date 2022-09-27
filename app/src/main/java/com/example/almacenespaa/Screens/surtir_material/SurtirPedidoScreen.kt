@@ -326,6 +326,7 @@ fun PedidoCard(
         .fillMaxWidth()
         .clickable {
             espandcard = !espandcard
+            pedidosMaterialViewModel.getComponenttFamily(item)
         }
         .padding(5.dp)
     ) {
@@ -347,12 +348,12 @@ fun PedidoCard(
                 modifier = Modifier.padding(vertical = 2.dp)
             )
             Text(
-                text = "Ubicacion: " + item.ubicacion!!,
+                text = "Ubicacion: " + item.ubicacion,
                 style = MaterialTheme.typography.subtitle2,
                 modifier = Modifier.padding(vertical = 2.dp)
             )
             Text(
-                text = "Piezas surtidas: "+item.surtido!!,
+                text = "Piezas surtidas: "+item.surtido,
                 style = MaterialTheme.typography.subtitle2,
                 modifier = Modifier.padding(vertical = 2.dp)
             )
@@ -395,11 +396,13 @@ fun PedidoCard(
                         placeholder = { Text(text = "Ingresa") },
                         trailingIcon = {
                             IconButton(onClick = {
-                                pedidosMaterialViewModel.pzSimilar(
-                                    datos = item.dat!!,
-                                    similar = similarx.value,
-                                    context = context
-                                )
+//                                pedidosMaterialViewModel.pzSimilar(
+//                                    datos = item.dat!!,
+//                                    similar = similarx.value,
+//                                    context = context
+//                                )
+
+//                                pedidosMaterialViewModel.getComponenttFamily(item)
                             }) {
                                 Icon(
                                     Icons.Filled.YoutubeSearchedFor,
@@ -413,11 +416,12 @@ fun PedidoCard(
                         ),
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                pedidosMaterialViewModel.pzSimilar(
-                                    datos = item.dat!!,
-                                    similar = similarx.value,
-                                    context = context
-                                )
+//                                pedidosMaterialViewModel.pzSimilar(
+//                                    datos = item.dat!!,
+//                                    similar = similarx.value,
+//                                    context = context
+//                                )
+//                                pedidosMaterialViewModel.getComponenttFamily(item)
                             }),
                         shape = RoundedCornerShape(10)
                     )

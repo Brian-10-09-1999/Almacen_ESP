@@ -112,12 +112,12 @@ private fun ContentHome(
             titleHome()
             subTitleHome()
             contentHome(navController,onclickLogin)
-            /*subTitleMovimientos()
-            contentMoviemientos(navController)
-            subTitleInventarios()
-            contentInventarios()
-            subTitleAvance()
-            contentAvance()*/
+//            subTitleMovimientos()
+//            contentMoviemientos(navController)
+//            subTitleInventarios()
+//            contentInventarios()
+//            subTitleAvance()
+//            contentAvance()
         }
     }
 }

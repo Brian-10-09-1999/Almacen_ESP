@@ -5,14 +5,11 @@ import com.google.gson.annotations.SerializedName
 data class ResponseComponentFamily(
 
 	@SerializedName("refacciones")
-	val refacciones: List<RefaccionesItem?>? = null
+	val refacciones: ArrayList<RefaccionesItem>? = arrayListOf()
 )
 
 data class RefaccionesItem(
 
-	@SerializedName("codigo")
-	val codigo: String? = null,
-
-	@SerializedName("nombre")
-	val nombre: String? = null
+	@SerializedName("codigo") val codigo: String? = null,
+	@SerializedName("nombre") val nombre: String? = null
 )
